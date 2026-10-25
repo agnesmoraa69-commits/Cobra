@@ -2,10 +2,9 @@
 const SUPABASE_URL = "https://heegblkuginpffhuvauu.supabase.co";
 const SUPABASE_ANON_KEY = "sb_publishable_1inZ79YoBSGjge3CSW4WaA_9PTMa2ct";
 
-const supabaseClient = window.supabase.createClient(
-  SUPABASE_URL,
-  SUPABASE_ANON_KEY
-);
+const supabaseClient = window.supabase
+  ? window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
+  : null;
 // ---- end Supabase setup ----
 // COBRA FX - Main JS
 
